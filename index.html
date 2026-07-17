@@ -4,9 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preload" 
+  href="fonts/poppins-v24-latin-regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin>
+  <link rel="preload" 
+  href="fonts/poppins-v24-latin-500.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin>
+  <link rel="preload" 
+  href="fonts/poppins-v24-latin-600.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin>
+  <link rel="preload" 
+  href="fonts/poppins-v24-latin-700.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin>
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body>
-
+  <main class="parent-container">
+    <h1 class="intro-title">Learn to code by watching others</h1>
+    <p class="intro-paragraph">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable</p>
+    <section class="free-trial-container"><span class="highlighted-text">Try it free 7 days</span> then $20/mo. thereafter</section>
+    <div class="sign-up-form-container">
+      <form class="sign-up-form" action="index.php" method="post" enctype="multipart/form-data">
+        <input class="inputs" type="text" placeholder="First Name" name="Firstname">
+        <input class="inputs" type="text" placeholder="Last Name" name="Last Name">
+        <input class="inputs" type="email" placeholder="Email Address" name="Email">
+        <input class="inputs" type="password" placeholder="Password">
+        <button class="claim-button" type="submit">CLAIM YOUR FREE TRIAL</button>
+      </form>
+      <p class="informative-text">By clicking the button, you are agreeing to our <span class="terms-and-services">Terms and Services</span></p>
+    </div>
+  </main>
 </body>
 </html>
