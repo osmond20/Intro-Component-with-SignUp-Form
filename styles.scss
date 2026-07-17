@@ -43,6 +43,7 @@
   --light-light-grey:hsl(0, 0%, 85%);
   --inputs-grey-color: hsl(0,0%, 50%);
   --mobile-design: calc(375 / 16 * 1rem);
+  --desktop-design: calc(1440 / 16 * 1rem);
   --typograpy-body-font-size: calc(16 / 16 * 1rem);
   --typography-font: Poppins, 'sans-serif';
 }
@@ -91,7 +92,7 @@ body{
   font-family: var(--typography-font);
   color: var(--white);
   min-height: 100vh;
-  width:var(--mobile-design);
+  width:100%;
   background-color: var(--primary-red-400);
   background-image: url(images/bg-intro-mobile.png);
   background-repeat: no-repeat;
@@ -99,7 +100,7 @@ body{
 
 .parent-container{
   min-height: 100%;
-  min-width: 100%;
+  min-width: var(--mobile-design);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,7 +115,7 @@ body{
   margin-block-start: calc(90/ 16 * 1rem);
   font-size: calc(28 / 16 * 1rem);
   line-height: 1.34em;
-  width: 100%;
+  width: var(--mobile-design);
 }
 
 .intro-paragraph{
@@ -176,6 +177,7 @@ body{
   font-weight: 600;
   border-radius: calc(5 / 16 * 1rem);
   padding-inline-start: calc(18 / 16 * 1rem);
+  padding-inline-end: calc(10 / 16 * 1rem);
   padding-block-start: calc(5 / 16 * 1rem);
   color: var(--inputs-grey-color);
 }
@@ -196,8 +198,12 @@ body{
   opacity: 0.9;
 }
 
-.inputs:focus, .claim-button:focus-visible{
-  outline: 1.5px solid var(--neutral-gray-900);
+.inputs:focus, .claim-button:focus{
+  outline: none;
+}
+
+.inputs:focus-visible, .claim-button:focus-visible{
+  outline: 1px solid var(--inputs-grey-color);
   outline-offset: .5em;
 }
 
@@ -217,6 +223,6 @@ body{
 
 
 @media(min-width:40rem){
-  
+
 }
 
