@@ -87,25 +87,31 @@ ol {
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: var(--typograpy-body-font-size);
   font-family: var(--typography-font);
   color: var(--white);
   min-height: 100vh;
-  width: 100%;
+  min-width: var(--mobile-design);
   background-color: var(--primary-red-400);
   background-image: url(images/bg-intro-mobile.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 .parent-container {
-  min-height: 100%;
-  min-width: var(--mobile-design);
+  height: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
   padding-block-end: 3.75rem;
+}
+
+.intro-container {
+  width: var(--mobile-design);
 }
 
 .intro-title, .intro-paragraph {
@@ -116,7 +122,6 @@ body {
   margin-block-start: 5.625rem;
   font-size: 1.75rem;
   line-height: 1.34em;
-  width: var(--mobile-design);
 }
 
 .intro-paragraph {
@@ -124,6 +129,13 @@ body {
   margin-block-end: 4rem;
   line-height: 1.6em;
   padding-inline: 1.875rem;
+}
+
+.trial-and-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .free-trial-container {
@@ -197,6 +209,7 @@ body {
 .claim-button:hover {
   cursor: pointer;
   opacity: 0.9;
+  box-shadow: 0 0 0 0 var(--primary-green-400);
 }
 
 .inputs:focus, .claim-button:focus {
@@ -204,8 +217,9 @@ body {
 }
 
 .inputs:focus-visible, .claim-button:focus-visible {
-  outline: 1px solid var(--inputs-grey-color);
-  outline-offset: 0.5em;
+  outline: 2px solid var(--accent-purple-700);
+  outline-offset: 0;
+  box-shadow: 0 0 0 2px var(--inputs-grey-color);
 }
 
 .informative-text {
@@ -220,4 +234,70 @@ body {
 .terms-and-services {
   font-weight: 700;
   color: var(--primary-red-400);
+}
+
+@media (min-width: 80rem) {
+  body {
+    flex-direction: row;
+    background-image: url(images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    justify-content: center;
+    background-size: cover;
+  }
+  .parent-container {
+    max-width: var(--desktop-design);
+    flex-direction: row;
+    padding-block-end: 0;
+  }
+  .intro-container, .trial-and-form-container {
+    width: 720rem;
+  }
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .intro-title {
+    font-size: 3.125rem;
+    line-height: 1.15em;
+    padding-block-end: 1.875rem;
+    padding-inline-start: 25rem;
+    text-align: start;
+  }
+  .intro-paragraph {
+    padding-inline-start: 25rem;
+    padding-inline-end: 0.625rem;
+    text-align: start;
+    width: 100%;
+    margin-block: 0;
+    padding-block-end: 5rem;
+  }
+  .trial-and-form-container {
+    align-items: start;
+    padding-inline-start: 1.5625rem;
+  }
+  .free-trial-container {
+    height: 3.75rem;
+    width: 33.75rem;
+    justify-content: center;
+  }
+  .sign-up-form-container {
+    width: 33.75rem;
+    padding-block-start: 1.25rem;
+    height: 29.6875rem;
+  }
+  .sign-up-form {
+    gap: 1.3125rem;
+  }
+  .inputs {
+    width: 28.75rem;
+    padding-inline-start: 2rem;
+    padding-block-start: 0.25rem;
+  }
+  .claim-button {
+    width: 28.75rem;
+  }
+  .informative-text {
+    margin-block-start: 0.9375rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
