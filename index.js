@@ -3,3 +3,7 @@ const input = document.querySelectorAll(".inputs");
 // selecting the button with the CSS selector of '.claim-button'
 const button = document.querySelector(".claim-button");
 
+button.addEventListener("click", () => {
+    
+})
+

@@ -202,7 +202,8 @@ body{
   border-radius: calc(5 / 16 * 1rem);
   font-weight: 500;
   opacity: 1;
-  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   box-shadow: 0 5px 0px var(--primary-green-400-shadow);
 } 
 
@@ -210,6 +211,7 @@ body{
   cursor: pointer;
   opacity: 0.9;
   box-shadow: 0 0 0 0 var(--primary-green-400);
+  transform: translateY(-2px);
 }
 
 .inputs:focus, .claim-button:focus{
