@@ -267,19 +267,19 @@ body{
   .intro-title{
     font-size: calc(50 / 16 * 1rem);
     line-height: 1.15em;
-    padding-block-end: calc(30 / 16 * 1rem);
-    padding-inline-start: calc(400 / 16 * 1rem);
+    padding-block-end: calc(30 / 16 * 1rem); // use clamp function for laptop responsiveness
+    padding-inline-start: calc(400 / 16 * 1rem); // use clamp function for laptop responsiveness
     text-align: start;
    
   }
 
   .intro-paragraph{
-    padding-inline-start: calc(400 / 16 * 1rem);
-    padding-inline-end: calc(10 / 16 * 1rem);
+    padding-inline-start: calc(400 / 16 * 1rem); // use clamp function for laptop responsiveness
+    padding-inline-end: calc(10 / 16 * 1rem); // use clamp function for laptop responsiveness
     text-align: start;
     width: 100%;
     margin-block: 0;
-    padding-block-end: calc(80 / 16 * 1rem);
+    padding-block-end: calc(80 / 16 * 1rem); // use clamp function for laptop responsiveness
   }
 
   .trial-and-form-container{
