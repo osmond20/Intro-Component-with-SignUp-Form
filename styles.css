@@ -274,7 +274,7 @@ body {
   color: var(--primary-red-400);
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 40rem) {
   body {
     flex-direction: row;
     background-image: url(images/bg-intro-desktop.png);
@@ -303,13 +303,13 @@ body {
     text-align: start;
   }
 }
-@media (min-width: 64rem) and (min-width: 90rem) {
+@media (min-width: 40rem) and (min-width: 90rem) {
   .intro-title {
     padding-block-end: 1.875rem;
     padding-inline-start: 25rem;
   }
 }
-@media (min-width: 64rem) {
+@media (min-width: 40rem) {
   .intro-paragraph {
     padding-inline-start: 12.5rem;
     padding-inline-end: 0.625rem;
@@ -319,13 +319,13 @@ body {
     padding-block-end: 5rem;
   }
 }
-@media (min-width: 64rem) and (min-width: 90rem) {
+@media (min-width: 40rem) and (min-width: 90rem) {
   .intro-paragraph {
     padding-inline-start: 25rem;
     padding-block-end: 5rem;
   }
 }
-@media (min-width: 64rem) {
+@media (min-width: 40rem) {
   .trial-and-form-container {
     align-items: start;
     padding-inline-start: 1.5625rem;
