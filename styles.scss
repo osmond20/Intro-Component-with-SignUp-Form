@@ -271,7 +271,7 @@ opacity: 1;
 }
 
 
-@media(min-width:80rem){
+@media(min-width:64rem){
   body{
     flex-direction: row;
     background-image: url(images/bg-intro-desktop.png);
@@ -299,19 +299,32 @@ opacity: 1;
   .intro-title{
     font-size: calc(50 / 16 * 1rem);
     line-height: 1.15em;
-    padding-block-end: calc(30 / 16 * 1rem); // use clamp function for laptop responsiveness
-    padding-inline-start: calc(400 / 16 * 1rem); // use clamp function for laptop responsiveness
+    padding-block-end: calc(20 / 16 * 1rem); // use clamp function for laptop responsiveness
+    padding-inline-start: calc(200 / 16 * 1rem); // use clamp function for laptop responsiveness
     text-align: start;
-   
+  }
+
+  @media(min-width: 90rem){
+    .intro-title{
+      padding-block-end: calc(30 / 16 * 1rem); // use clamp function for laptop responsiveness
+      padding-inline-start: calc(400 / 16 * 1rem); 
+    }
   }
 
   .intro-paragraph{
-    padding-inline-start: calc(400 / 16 * 1rem); // use clamp function for laptop responsiveness
+    padding-inline-start: calc(200 / 16 * 1rem); // use clamp function for laptop responsiveness
     padding-inline-end: calc(10 / 16 * 1rem); // use clamp function for laptop responsiveness
     text-align: start;
     width: 100%;
     margin-block: 0;
     padding-block-end: calc(80 / 16 * 1rem); // use clamp function for laptop responsiveness
+  }
+
+  @media(min-width:90rem){
+    .intro-paragraph{
+      padding-inline-start: calc(400 / 16 * 1rem);
+      padding-block-end: calc(80 / 16 * 1rem);
+    }
   }
 
   .trial-and-form-container{
@@ -342,7 +355,7 @@ opacity: 1;
   }
 
   .invalid-message.show{
-    padding-right: 2.5rem;
+    padding-right: 3rem;
   }
 
   .claim-button{

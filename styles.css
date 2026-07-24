@@ -274,7 +274,7 @@ body {
   color: var(--primary-red-400);
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
   body {
     flex-direction: row;
     background-image: url(images/bg-intro-desktop.png);
@@ -298,18 +298,34 @@ body {
   .intro-title {
     font-size: 3.125rem;
     line-height: 1.15em;
-    padding-block-end: 1.875rem;
-    padding-inline-start: 25rem;
+    padding-block-end: 1.25rem;
+    padding-inline-start: 12.5rem;
     text-align: start;
   }
-  .intro-paragraph {
+}
+@media (min-width: 64rem) and (min-width: 90rem) {
+  .intro-title {
+    padding-block-end: 1.875rem;
     padding-inline-start: 25rem;
+  }
+}
+@media (min-width: 64rem) {
+  .intro-paragraph {
+    padding-inline-start: 12.5rem;
     padding-inline-end: 0.625rem;
     text-align: start;
     width: 100%;
     margin-block: 0;
     padding-block-end: 5rem;
   }
+}
+@media (min-width: 64rem) and (min-width: 90rem) {
+  .intro-paragraph {
+    padding-inline-start: 25rem;
+    padding-block-end: 5rem;
+  }
+}
+@media (min-width: 64rem) {
   .trial-and-form-container {
     align-items: start;
     padding-inline-start: 1.5625rem;
@@ -333,7 +349,7 @@ body {
     padding-block-start: 0.25rem;
   }
   .invalid-message.show {
-    padding-right: 2.5rem;
+    padding-right: 3rem;
   }
   .claim-button {
     width: 28.75rem;
