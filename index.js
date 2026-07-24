@@ -21,13 +21,20 @@ form.addEventListener('submit', event =>{
     let isValid = true;
 
     inputs.forEach(input =>{
-        const invalidEmail = input.type === 'email' && !isValidEmail(input.value); 
-        if(input.value.trim() == '' || invalidEmail){
-            input.classList.toggle('invalid');
+        const invalidEmail = input.type === 'email' && !isValidEmail(input.value);
+        const message = input.nextElementSibling;
+
+        if(input.value.trim() === '' || invalidEmail){
+            input.classList.add('invalid');
+            if(message && message.classList.contains('invalid-message')){
+                message.classList.add('show');
+            }
             isValid = false;
-        }
-        else{
+        } else {
             input.classList.remove('invalid');
+            if(message && message.classList.contains('invalid-message')){
+                message.classList.remove('show');
+            }
         }
     })
 

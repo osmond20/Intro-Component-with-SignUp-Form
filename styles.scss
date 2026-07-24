@@ -172,7 +172,7 @@ body{
   justify-content: start;
   align-items: center;
   padding-block-start: calc(22 / 16 * 1rem);
-  gap: calc(17.5 / 16 * 1rem);
+  gap: calc(2.2 / 16 * 1rem);
 }
 
 .free-trial-container,
@@ -207,6 +207,24 @@ body{
 
 .inputs.invalid::placeholder{
    color: var(--white)
+}
+
+.invalid-message{
+  font-size: calc(9 / 16 * 1rem);
+  font-weight: 600;
+  font-style: italic;
+  color:var(--primary-red-400);
+  margin-block:0;
+  padding-block: 0;
+  text-align: end;
+  align-self: flex-end;
+  padding-right: 2rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.invalid-message.show{
+opacity: 1;
 }
 
 .claim-button{
@@ -314,13 +332,17 @@ body{
   }
 
   .sign-up-form{
-    gap: calc(21 / 16 * 1rem);
+    gap: calc(6 / 16 * 1rem);
   }
 
   .inputs{
     width: calc(460 / 16 * 1rem);
     padding-inline-start: calc(32 / 16 * 1rem);
     padding-block-start: calc(4 / 16 * 1rem);
+  }
+
+  .invalid-message.show{
+    padding-right: 2.5rem;
   }
 
   .claim-button{
